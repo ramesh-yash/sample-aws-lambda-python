@@ -1,28 +1,31 @@
-AWSTemplateFormatVersion: '2010-09-09'
-Transform: 'AWS::Serverless-2016-10-31'
-Description: An AWS Lambda application that calls the Lambda API.
+AWSTemplateFormatVersion : "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: sample API Service
+
 Resources:
-  BasicAWSApiGateway:
+  SampleApiGateway: 
     Type: AWS::Serverless::Api
     Properties:
-      Name: Basic AWS Api Gateway
-      StageName: Staging
-  function:
+      StageName: Prod
+      DefinitionUri: ./swagger.yaml
+  PostSampleFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: lambda_function.lambda_handler
+      FunctionName: PostSamplePetFunction
       Runtime: python3.8
-      CodeUri: function/.
-      Description: Call the AWS Lambda API
-      Timeout: 10
-      # Function's execution role
-      Policies:
-        - AWSLambdaBasicExecutionRole
-      Tracing: Active
+      Handler: lambda_function.lambda_handler
+      CodeUri: ./function/
       Events:
-        BasicAWSApiGateway:
+        PostSampleApi:
           Type: Api
           Properties:
-            RestApiId: !Ref BasicAWSApiGateway
+            RestApiId: !Ref SampleApiGateway
             Path: /sum
-            Method: post
+            Method: POST
+      Policies:
+        - AWSLambdaBasicExecutionRole
+Outputs:
+# Sum Outputs
+  SumFunctionApi:
+    Description: "API Gateway endpoint URL for Prod stage for SumFunction"
+    Value: !Sub "https://${SampleApiGateway}.execute-api.${AWS::Region}.amazonaws.com/Prod/sum"

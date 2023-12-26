@@ -3,19 +3,10 @@ import importlib
 import logging
 import jsonpickle
 import json
-#from aws_xray_sdk.core import xray_recorder
+from lambdas.lambda_function import sum, lambda_handler
+
 
 logger = logging.getLogger()
-#xray_recorder.configure(
-#  context_missing='LOG_ERROR'
-#)
-#function = importlib.import_module(lambda_function)
-
-#xray_recorder.begin_segment('test_init')
-function = __import__('lambda_function')
-handler = function.lambda_handler
-sum = function.sum
-#xray_recorder.end_segment()
 
 class TestFunction(unittest.TestCase):
 
@@ -36,7 +27,7 @@ class TestFunction(unittest.TestCase):
       logger.warning('## EVENT')
       logger.warning(jsonpickle.encode(event))
       context = {'requestid' : '1234'}
-      actual_result = handler(event, context)
+      actual_result = lambda_handler(event, context)
       print(str(actual_result))
       self.assertEqual(actual_result, expected_result)
     finally:

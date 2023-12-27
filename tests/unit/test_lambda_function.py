@@ -16,18 +16,17 @@ class TestFunction(unittest.TestCase):
     actual_result = sum(test_input)
     self.assertEqual(expected_result, actual_result)
 
-  def test_function(self):
+  def test_lambda_handler(self):
     #xray_recorder.begin_segment('test_function')
     file = open('event.json', 'rb')
-    requested_event = ""
     expected_result = 15
     try:
       ba = bytearray(file.read())
-      event = jsonpickle.decode(ba)
+      test_event = jsonpickle.decode(ba)
       logger.warning('## EVENT')
-      logger.warning(jsonpickle.encode(event))
-      context = {'requestid' : '1234'}
-      actual_result = lambda_handler(event, context)
+      logger.warning(jsonpickle.encode(test_event))
+      test_context = {'requestid' : '1234'}
+      actual_result = lambda_handler(test_event, test_context)
       print(str(actual_result))
       self.assertEqual(actual_result, expected_result)
     finally:

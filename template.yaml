@@ -3,11 +3,6 @@ Transform: AWS::Serverless-2016-10-31
 Description: sample API Service
 
 Resources:
-  SampleApiGateway: 
-    Type: AWS::Serverless::Api
-    Properties:
-      StageName: Prod
-      DefinitionUri: ./swagger.yaml
   PostSampleFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -24,6 +19,11 @@ Resources:
             Method: POST
       Policies:
         - AWSLambdaBasicExecutionRole
+  SampleApiGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Prod
+      DefinitionUri: ./swagger.yaml
 Outputs:
 # Sum Outputs
   SumFunctionApi:

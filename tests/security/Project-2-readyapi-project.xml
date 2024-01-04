@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="db88b47b-36b7-4e9f-b2e5-2470decec54d" created="3.50.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="Project 1" projectVersion="" updated="3.50.0 2023-12-13T08:40:33Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="8a72c906-d2db-42b1-8bbf-98735d952b91" created="3.50.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="Project 2" projectVersion="" updated="3.50.0 2023-12-13T08:40:33Z" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
-  <con:interface xsi:type="con:RestService" id="6b6a1f5d-97e2-4c67-851b-c33dfcde8825" name="Sample API" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" definitionUrl="file:/D:/sample-lambda-python/swagger.yaml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:interface xsi:type="con:RestService" id="73c7285d-8d97-43ff-9fd8-fb16536ae101" name="Sample API" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" definitionUrl="file:/D:/sample-lambda-python/swagger.yaml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:description>sample api.</con:description>
-    <con:settings id="808a6449-0fab-49b5-8781-1a9dfbe23b7a"/>
+    <con:settings id="e65df500-d789-4e5c-96f4-307c0665d3b5"/>
     <con:definitionCache type="TEXT" rootPart="file:/D:/sample-lambda-python/swagger.yaml">
       <con:part>
         <con:url>file:/D:/sample-lambda-python/swagger.yaml</con:url>
@@ -47,10 +47,10 @@ paths:
     <con:endpoints>
       <con:endpoint>/</con:endpoint>
     </con:endpoints>
-    <con:resource name="/sum" path="/sum" id="d14f3ed5-6bb1-409f-a287-1184f57a2611">
+    <con:resource name="/sum" path="/sum" id="1f9957c1-d2a6-497f-9fae-bfea9bf941c8">
       <con:settings/>
       <con:parameters/>
-      <con:method name="POST" id="015f70ee-4bc4-4c19-92f8-ffe14033a641" method="POST">
+      <con:method name="POST" id="db90c1e6-e6b6-495c-9d50-e52cfaeb5d17" method="POST">
         <con:description>calculate</con:description>
         <con:settings/>
         <con:parameters/>
@@ -66,7 +66,7 @@ paths:
           <con:params/>
           <con:sampleContent>[ 0 ]</con:sampleContent>
         </con:representation>
-        <con:request name="Request 1" id="694dee68-95e2-4cc5-bc4e-db744e9aba67" mediaType="application/json">
+        <con:request name="Request 1" id="6a7afcfd-42a8-48e8-8647-40fe3ffb87b5" mediaType="application/json">
           <con:settings/>
           <con:endpoint>/</con:endpoint>
           <con:request>[ 0 ]</con:request>
@@ -79,54 +79,53 @@ paths:
       </con:method>
     </con:resource>
   </con:interface>
-  <con:testSuite id="bc825c95-e7cc-4055-a71d-844c81c36048" name="Project 1 Test Suite 1">
-    <con:settings id="9828ee4a-6872-4257-8019-5a4d4e302cf2"/>
+  <con:testSuite id="610cb6da-4141-4762-99c5-c49f547f875f" name="Project 2 Test Suite 1">
+    <con:settings id="2e1cf59c-a368-4301-9390-6b624a702adc"/>
     <con:runType>SEQUENTIAL</con:runType>
-    <con:testCase id="445ebf40-d927-48bc-b1eb-cfd9aa9a2ee6" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="/sum-Request 1 Test Case" searchProperties="true" timeout="0">
+    <con:testCase id="86139934-7528-444e-ba35-aff3488241e3" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="/sum-Request 1 Test Case" searchProperties="true" timeout="0">
       <con:settings/>
-      <con:testStep type="restrequest" name="POST Request" id="32eb469b-3767-4bc8-b36f-4d61cad7900d">
+      <con:testStep type="restrequest" name="POST Request" id="6c6171eb-5fb3-4054-bf41-ee52c81dfae9">
         <con:settings/>
         <con:config service="Sample API" resourcePath="/sum" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="POST Request" id="694dee68-95e2-4cc5-bc4e-db744e9aba67" mediaType="application/json" postQueryString="false">
+          <con:restRequest name="POST Request" id="6a7afcfd-42a8-48e8-8647-40fe3ffb87b5" mediaType="application/json">
             <con:settings/>
             <con:endpoint>/</con:endpoint>
             <con:request>[ 0 ]</con:request>
-            <con:assertion type="Valid HTTP Status Codes" id="89e32204-f5c7-46e8-8068-4d4c9ad7f0b1" name="Valid HTTP Status Codes">
+            <con:assertion type="Valid HTTP Status Codes" id="84f31dff-c7ce-43b4-8296-d431775a3d84" name="Valid HTTP Status Codes">
               <con:settings/>
               <con:configuration>
                 <codes>200</codes>
               </con:configuration>
             </con:assertion>
-            <con:assertion type="SwaggerComplianceAssertion" id="defd1057-382c-4003-82f6-880b1c6806fa" name="Swagger Compliance Assertion">
+            <con:assertion type="SwaggerComplianceAssertion" id="b95ae230-6185-49a9-a59c-dd651cdcdb1f" name="Swagger Compliance Assertion">
               <con:configuration>
                 <swaggerUrl>file:/D:/sample-lambda-python/swagger.yaml</swaggerUrl>
                 <strictMode>true</strictMode>
               </con:configuration>
             </con:assertion>
-            <con:assertion type="Response SLA Assertion" id="e140c8b3-a24c-4724-bdec-431d65329751" name="Response SLA">
+            <con:assertion type="Response SLA Assertion" id="e748a28c-f5a1-419d-99ed-696fdc4bc2b5" name="Response SLA">
               <con:configuration>
-                <SLA>2000</SLA>
+                <SLA>200</SLA>
               </con:configuration>
             </con:assertion>
             <con:credentials>
               <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
             </con:credentials>
-            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
             <con:parameters/>
           </con:restRequest>
         </con:config>
       </con:testStep>
       <con:properties/>
       <con:reportParameters/>
-      <con:securityTest id="42061eae-ed16-45ae-96b1-6a9e0c2d6080" testCaseId="445ebf40-d927-48bc-b1eb-cfd9aa9a2ee6" name="Security Test 1" failSecurityTestOnScanErrors="true">
+      <con:securityTest id="be8c483c-7351-4463-9b78-7dae5ee86553" testCaseId="86139934-7528-444e-ba35-aff3488241e3" name="Security Test 1" failSecurityTestOnScanErrors="true">
         <con:settings/>
         <con:testStepSecurityTest>
-          <con:testStepId>32eb469b-3767-4bc8-b36f-4d61cad7900d</con:testStepId>
-          <con:testStepSecurityScan type="BoundaryScan" name="Boundary Scan" id="72b4bb20-94ea-44a6-a4c5-b785088f17f1" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+          <con:testStepId>6c6171eb-5fb3-4054-bf41-ee52c81dfae9</con:testStepId>
+          <con:testStepSecurityScan type="BoundaryScan" name="Boundary Scan" id="c19daa57-c394-46ed-9b2b-a7920f83085c" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
             <con:settings/>
             <con:config xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <con:assertion type="Sensitive Information Exposure" id="6f1d3180-4ce1-4272-a156-a354d5e6824a" name="Sensitive Information Exposure">
+            <con:assertion type="Sensitive Information Exposure" id="2c1cac00-7261-4200-abde-b08dad39e287" name="Sensitive Information Exposure">
               <con:configuration/>
             </con:assertion>
             <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -138,7 +137,7 @@ paths:
               <con:delay>100</con:delay>
             </con:executionStrategy>
           </con:testStepSecurityScan>
-          <con:testStepSecurityScan type="CrossSiteScriptingScan" name="Cross Site Scripting" id="397b61ed-96fc-462a-acab-fd92809c7599" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+          <con:testStepSecurityScan type="CrossSiteScriptingScan" name="Cross Site Scripting" id="f135598e-84ca-4b1d-995a-dcd883749977" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
             <con:settings/>
             <con:config xsi:type="con:CrossSiteScriptingScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <con:parameterExposureStrings>&lt;PLAINTEXT></con:parameterExposureStrings>
@@ -234,10 +233,10 @@ paths:
               <con:parameterExposureStrings>&lt;SCRIPT a=">'>" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
               <con:parameterExposureStrings>&lt;SCRIPT>document.write("&lt;SCRI");&lt;/SCRIPT>PT SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
             </con:config>
-            <con:assertion type="Sensitive Information Exposure" id="85fb1ac0-19b4-4eed-850d-823d970355e2" name="Sensitive Information Exposure">
+            <con:assertion type="Sensitive Information Exposure" id="81672149-f932-4380-a1a4-80591a30554e" name="Sensitive Information Exposure">
               <con:configuration/>
             </con:assertion>
-            <con:assertion type="CrosSiteScript" id="22cf404b-c935-4b9d-9dd0-fbff16eb95b6" name="Cross Site Scripting Detection">
+            <con:assertion type="CrosSiteScript" id="dee37121-5926-4725-b8aa-4573a4754387" name="Cross Site Scripting Detection">
               <con:configuration/>
             </con:assertion>
             <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -249,14 +248,14 @@ paths:
               <con:delay>100</con:delay>
             </con:executionStrategy>
           </con:testStepSecurityScan>
-          <con:testStepSecurityScan type="FuzzingScan" name="Fuzzing Scan" id="04291e80-bad4-4b07-af53-99320608f537" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+          <con:testStepSecurityScan type="FuzzingScan" name="Fuzzing Scan" id="34db52cd-50f8-4a70-ae30-50ddc6fa6bd8" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
             <con:settings/>
             <con:config xsi:type="con:FuzzerScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <con:minimal>5</con:minimal>
               <con:maximal>15</con:maximal>
               <con:numberOfRequest>100</con:numberOfRequest>
             </con:config>
-            <con:assertion type="Sensitive Information Exposure" id="62895894-48ae-47b0-8b2e-6289570a4ae9" name="Sensitive Information Exposure">
+            <con:assertion type="Sensitive Information Exposure" id="7727c6e4-9e8f-4dab-a5fe-25c6abf4a4f3" name="Sensitive Information Exposure">
               <con:configuration/>
             </con:assertion>
             <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -268,7 +267,7 @@ paths:
               <con:delay>100</con:delay>
             </con:executionStrategy>
           </con:testStepSecurityScan>
-          <con:testStepSecurityScan type="InvalidTypesSecurityScan" name="Invalid Types" id="9170f263-c1d4-49e9-aea5-718a934f8f13" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+          <con:testStepSecurityScan type="InvalidTypesSecurityScan" name="Invalid Types" id="4da7dd1b-7544-4011-a93d-b87b37bab082" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
             <con:settings/>
             <con:config xsi:type="con:InvalidSecurityScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <con:typesList>
@@ -373,7 +372,7 @@ paths:
                 <con:value>SoapUI is the best</con:value>
               </con:typesList>
             </con:config>
-            <con:assertion type="Sensitive Information Exposure" id="667523b7-4d10-4e60-aa46-a4ad298fbb66" name="Sensitive Information Exposure">
+            <con:assertion type="Sensitive Information Exposure" id="c13f67fa-154a-4393-9f7c-bdc09665cbdc" name="Sensitive Information Exposure">
               <con:configuration/>
             </con:assertion>
             <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -385,7 +384,7 @@ paths:
               <con:delay>100</con:delay>
             </con:executionStrategy>
           </con:testStepSecurityScan>
-          <con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection" id="63231ee4-f59b-4550-b3f2-441478e3fa36" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+          <con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection" id="aa7a82b7-d488-4825-ac5f-23fc9ccec594" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
             <con:settings/>
             <con:config xsi:type="con:SQLInjectionScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <con:sqlInjectionStrings>'-'</con:sqlInjectionStrings>
@@ -1202,7 +1201,7 @@ paths:
               <con:sqlInjectionStrings>admin') or ('1'='1'/*</con:sqlInjectionStrings>
               <con:sqlInjectionStrings>UNION ALL SELECT 1,2,3,4,5,6</con:sqlInjectionStrings>
             </con:config>
-            <con:assertion type="Sensitive Information Exposure" id="12636e4f-9c50-4c2e-9f6b-36d999e7823e" name="Sensitive Information Exposure">
+            <con:assertion type="Sensitive Information Exposure" id="b1b6bd2d-3085-49e7-a437-6f106a81aef8" name="Sensitive Information Exposure">
               <con:configuration/>
             </con:assertion>
             <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -1214,7 +1213,7 @@ paths:
               <con:delay>100</con:delay>
             </con:executionStrategy>
           </con:testStepSecurityScan>
-          <con:testStepSecurityScan type="XPathInjectionSecurityScan" name="XPath Injection" id="780a47af-911f-4878-9474-8a453b805543" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+          <con:testStepSecurityScan type="XPathInjectionSecurityScan" name="XPath Injection" id="e7c1725b-e992-4fb6-8ba0-3d7033d11644" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
             <con:settings/>
             <con:config xsi:type="con:XPathInjection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <con:xpathList>or name(//users/LoginID[1]) = 'LoginID' or 'a'='b</con:xpathList>
@@ -1228,7 +1227,7 @@ paths:
               <con:xpathList>test�%20UNION%20select%201,%20@@version,%201,%201;�</con:xpathList>
               <con:xpathList>test� UNION select 1, @@version, 1, 1;�</con:xpathList>
             </con:config>
-            <con:assertion type="Sensitive Information Exposure" id="5fc3ee6a-0f45-4638-9090-663abfe85dad" name="Sensitive Information Exposure">
+            <con:assertion type="Sensitive Information Exposure" id="213b15df-9c6c-46df-907a-25db258f7dc4" name="Sensitive Information Exposure">
               <con:configuration/>
             </con:assertion>
             <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -1240,15 +1239,15 @@ paths:
               <con:delay>100</con:delay>
             </con:executionStrategy>
           </con:testStepSecurityScan>
-          <con:testStepSecurityProScan type="HttpMethodFuzzingScan" name="HTTP Method Fuzzing" id="785a3454-7d04-4289-a521-e61e77f842f8" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+          <con:testStepSecurityProScan type="HttpMethodFuzzingScan" name="HTTP Method Fuzzing" id="c11f78a8-4dd0-48c4-984e-56f6cab5d2e4" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
             <con:settings/>
             <con:config xsi:type="con:HttpMethodFuzzingScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <con:deselectedMethods/>
             </con:config>
-            <con:assertion type="Sensitive Information Exposure" id="55cbc7ff-de33-40e1-a6f0-3c77a3917e54" name="Sensitive Information Exposure">
+            <con:assertion type="Sensitive Information Exposure" id="21e2284a-6210-4a57-962f-864d5b171ccf" name="Sensitive Information Exposure">
               <con:configuration/>
             </con:assertion>
-            <con:assertion type="Valid HTTP Status Codes" id="d7e8ebc4-0e75-4c9c-a951-0d52228a0730" name="Valid HTTP Status Codes">
+            <con:assertion type="Valid HTTP Status Codes" id="59b6cc2b-1c1b-4022-8890-9d7a9fbff4ee" name="Valid HTTP Status Codes">
               <con:settings>
                 <con:setting id="__LEVEL_">WARNING</con:setting>
               </con:settings>
@@ -1263,10 +1262,10 @@ paths:
               <con:delay>100</con:delay>
             </con:executionStrategy>
           </con:testStepSecurityProScan>
-          <con:testStepSecurityProScan type="InvalidJsonTypesSecurityScan" name="Invalid JSON Types" id="90225b54-0776-470a-abad-ac8f12d961c6" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+          <con:testStepSecurityProScan type="InvalidJsonTypesSecurityScan" name="Invalid JSON Types" id="28213577-196d-4d93-9b28-3d090a3fac1a" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
             <con:settings/>
             <con:config xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <con:assertion type="Sensitive Information Exposure" id="70d82588-00d3-4526-a94d-f6e25e3b2e84" name="Sensitive Information Exposure">
+            <con:assertion type="Sensitive Information Exposure" id="3208c5b5-6bff-49e1-9917-0a65dbec6bc2" name="Sensitive Information Exposure">
               <con:configuration/>
             </con:assertion>
             <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -1276,10 +1275,10 @@ paths:
               <con:delay>100</con:delay>
             </con:executionStrategy>
           </con:testStepSecurityProScan>
-          <con:testStepSecurityProScan type="JsonBoundaryScan" name="JSON Boundary Scan" id="ae1595b7-fed0-4422-9f61-20da6a0578c6" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+          <con:testStepSecurityProScan type="JsonBoundaryScan" name="JSON Boundary Scan" id="6dfb03b1-9cc0-48ea-a9aa-e819edde4362" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
             <con:settings/>
             <con:config xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <con:assertion type="Sensitive Information Exposure" id="8f09ba03-e77d-4258-8e04-7d67d4516328" name="Sensitive Information Exposure">
+            <con:assertion type="Sensitive Information Exposure" id="3d26957e-1a82-4d9c-b043-4205e0de9088" name="Sensitive Information Exposure">
               <con:configuration/>
             </con:assertion>
             <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -1289,14 +1288,14 @@ paths:
               <con:delay>100</con:delay>
             </con:executionStrategy>
           </con:testStepSecurityProScan>
-          <con:testStepSecurityProScan type="JsonFuzzingScan" name="JSON Fuzzing Scan" id="f02da3df-0ccf-4b83-82fb-8e42cb2ba142" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+          <con:testStepSecurityProScan type="JsonFuzzingScan" name="JSON Fuzzing Scan" id="44b6b555-e3c9-40f8-8441-384b8d1efbca" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
             <con:settings/>
             <con:config xsi:type="con:JsonFuzzerScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <con:minimal>5</con:minimal>
               <con:maximal>15</con:maximal>
               <con:numberOfRequest>100</con:numberOfRequest>
             </con:config>
-            <con:assertion type="Sensitive Information Exposure" id="7342bb7a-b82f-4b9e-9ca2-2e4d1b649695" name="Sensitive Information Exposure">
+            <con:assertion type="Sensitive Information Exposure" id="99ab7dde-5e67-4147-9f3c-f089d9420cf7" name="Sensitive Information Exposure">
               <con:configuration/>
             </con:assertion>
             <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -1306,7 +1305,7 @@ paths:
               <con:delay>100</con:delay>
             </con:executionStrategy>
           </con:testStepSecurityProScan>
-          <con:testStepSecurityProScan type="SensitiveFileSecurityScan" name="Sensitive Files Exposure" id="17a6f0df-1568-4e3b-bf9d-137e98abcf5e" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+          <con:testStepSecurityProScan type="SensitiveFileSecurityScan" name="Sensitive Files Exposure" id="6c76f5cf-c85b-4bd7-a56c-be324c8db2e8" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
             <con:settings/>
             <con:config xsi:type="con:SensitiveFileSecurityScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/known_hosts"/>
@@ -1359,7 +1358,7 @@ paths:
               <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/db/seeds.rb"/>
               <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/db/development.sqlite3"/>
             </con:config>
-            <con:assertion type="Sensitive Files Exposure Assertion" id="9bd542cf-67e8-45c8-af28-7ba181ccf2c9" name="Sensitive Files Exposure"/>
+            <con:assertion type="Sensitive Files Exposure Assertion" id="140a8e95-15f0-4e9c-975e-b2c685ce2ff0" name="Sensitive Files Exposure"/>
             <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
             <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
             <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -1367,13 +1366,13 @@ paths:
               <con:delay>100</con:delay>
             </con:executionStrategy>
           </con:testStepSecurityProScan>
-          <con:testStepSecurityProScan type="WeakAuthenticationScan" name="Weak Authentication" id="962125df-b30e-4321-a338-cd76c5c67940" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+          <con:testStepSecurityProScan type="WeakAuthenticationScan" name="Weak Authentication" id="6890c0f6-3712-4f1e-b1ac-cb6a30989085" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
             <con:settings/>
             <con:config xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <con:assertion type="WeakPassword" id="0c5b1544-9871-4fee-956d-33e6647aa127" name="Weak Password Detection">
+            <con:assertion type="WeakPassword" id="f89a8380-b9d9-48d6-8cd2-473593939644" name="Weak Password Detection">
               <con:configuration/>
             </con:assertion>
-            <con:assertion type="BasicAuth" id="7c14eb8a-b37c-45e2-8094-dda8f4b07ea0" name="Basic Authentication Detection"/>
+            <con:assertion type="BasicAuth" id="00517c1e-6fcd-4b37-9fda-73cd109f8f16" name="Basic Authentication Detection"/>
             <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
             <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
             <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -1429,188 +1428,5 @@ paths:
 // fos.close()</con:script>
   </con:eventHandlers>
   <con:authRepository/>
-  <con:loadUiTest name="Load Test 1" id="6864f05c-b21c-4e4e-bee8-f57188dcfec2">
-    <con:settings>
-      <con:setting id="soapUIObjectSourceId">445ebf40-d927-48bc-b1eb-cfd9aa9a2ee6</con:setting>
-      <con:setting id="soapUIObjectSourceType">soapUIObjectSourceType_RestRequest</con:setting>
-    </con:settings>
-    <con1:loadui-project id="afbeebe3-5773-4f01-a379-1ede7c7de9c1" label="Load Test 1" xmlns:con1="http://eviware.com/loadui/config">
-      <con1:properties>
-        <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-        <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
-        <con1:property propagates="true" key="ModelItem.saveReport" type="java.lang.Boolean">false</con1:property>
-        <con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/>
-        <con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/>
-        <con1:property propagates="true" key="Temporary project" type="java.lang.String"/>
-        <con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">10</con1:property>
-        <con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">Relative</con1:property>
-        <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
-        <con1:property propagates="true" key="ModelItem.id" type="java.lang.String">6864f05c-b21c-4e4e-bee8-f57188dcfec2</con1:property>
-      </con1:properties>
-      <con1:attributes>
-        <con1:property key="limits">Time=7200;</con1:property>
-      </con1:attributes>
-      <con1:addons>
-        <con1:addon type="com.eviware.loadui.pro.api.monitoring.ServerAddon" id="5e9b7e41-7030-44cd-acb9-feb077e0bb91">
-          <con1:properties>
-            <con1:property propagates="false" key="ServerItem.host" type="java.lang.String">test-target-server</con1:property>
-            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-          </con1:properties>
-          <con1:attributes>
-            <con1:property key="label">My server 1</con1:property>
-          </con1:attributes>
-          <con1:addons>
-            <con1:addon type="monitor" id="2e8e1f5b-f2c7-4df7-b5d9-a529002125a8">
-              <con1:properties>
-                <con1:property propagates="true" key="_storedProperties[typeperf]" type="java.lang.String"/>
-                <con1:property propagates="true" key="monitorName" type="java.lang.String">My monitor</con1:property>
-              </con1:properties>
-              <con1:attributes>
-                <con1:property key="_type">Windows</con1:property>
-              </con1:attributes>
-              <con1:addons/>
-            </con1:addon>
-          </con1:addons>
-        </con1:addon>
-        <con1:addon type="com.eviware.loadui.api.assertion.AssertionAddon" id="6349bcc8-2216-4918-84b6-a59c37a2339d">
-          <con1:attributes>
-            <con1:property key="parentId">afbeebe3-5773-4f01-a379-1ede7c7de9c1</con1:property>
-            <con1:property key="valueReference">rO0ABXNyADdjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5zZXJpYWxpemF0aW9uLlN0YXRpc3RpY1Jlc29sdmVyJwTr+w+xV3ECAARMAA1ob2xkZXJBZGRyZXNzdAASTGphdmEvbGFuZy9TdHJpbmc7TAAGc291cmNlcQB+AAFMAA1zdGF0aXN0aWNOYW1lcQB+AAFMAAx2YXJpYWJsZU5hbWVxAH4AAXhwdAAkYWZiZWViZTMtNTc3My00ZjAxLWEzNzktMWVkZTdjN2RlOWMxdAAEbWFpbnQAB0FWRVJBR0V0AApUaW1lIFRha2Vu</con1:property>
-            <con1:property key="Labeled@label">Time Taken - average</con1:property>
-            <con1:property key="constraint">rO0ABXNyADFjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5hc3NlcnRpb24uUmFuZ2VDb25zdHJhaW50Y94NW62dOawCAAJEAANtYXhEAANtaW54cEC/QAAAAAAAAAAAAAAAAAA=</con1:property>
-            <con1:property key="tolerancePeriod">0</con1:property>
-            <con1:property key="toleranceAllowedOccurrences">0</con1:property>
-            <con1:property key="stopTestOnFailure">false</con1:property>
-          </con1:attributes>
-          <con1:addons/>
-        </con1:addon>
-        <con1:addon type="com.eviware.loadui.api.assertion.AssertionAddon" id="b39cb412-dd56-4718-ae9b-375d69f8f591">
-          <con1:attributes>
-            <con1:property key="parentId">afbeebe3-5773-4f01-a379-1ede7c7de9c1</con1:property>
-            <con1:property key="valueReference">rO0ABXNyADdjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5zZXJpYWxpemF0aW9uLlN0YXRpc3RpY1Jlc29sdmVyJwTr+w+xV3ECAARMAA1ob2xkZXJBZGRyZXNzdAASTGphdmEvbGFuZy9TdHJpbmc7TAAGc291cmNlcQB+AAFMAA1zdGF0aXN0aWNOYW1lcQB+AAFMAAx2YXJpYWJsZU5hbWVxAH4AAXhwdAAkYWZiZWViZTMtNTc3My00ZjAxLWEzNzktMWVkZTdjN2RlOWMxdAAEbWFpbnQAClBFUl9TRUNPTkR0AAhGYWlsdXJlcw==</con1:property>
-            <con1:property key="Labeled@label">Failures - per second</con1:property>
-            <con1:property key="constraint">rO0ABXNyADFjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5hc3NlcnRpb24uUmFuZ2VDb25zdHJhaW50Y94NW62dOawCAAJEAANtYXhEAANtaW54cD/wAAAAAAAAAAAAAAAAAAA=</con1:property>
-            <con1:property key="tolerancePeriod">0</con1:property>
-            <con1:property key="toleranceAllowedOccurrences">0</con1:property>
-            <con1:property key="stopTestOnFailure">false</con1:property>
-          </con1:attributes>
-          <con1:addons/>
-        </con1:addon>
-      </con1:addons>
-      <con1:scene label="New Scenario" id="6327e76c-ca1b-4487-8082-11acdf209114">
-        <con1:properties>
-          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-          <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
-          <con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property>
-          <con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property>
-          <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
-          <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
-        </con1:properties>
-        <con1:attributes>
-          <con1:property key="limits">Time=7200;</con1:property>
-        </con1:attributes>
-        <con1:addons/>
-        <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="b11fd397-c9e1-49be-bec5-878b140c7aea" category="Scheduler">
-          <con1:properties>
-            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
-            <con1:property propagates="true" key="startAt" type="java.lang.Long">0</con1:property>
-            <con1:property propagates="true" key="duration" type="java.lang.Long">5</con1:property>
-            <con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property>
-            <con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property>
-            <con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">true</con1:property>
-          </con1:properties>
-          <con1:attributes>
-            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Interval</con1:property>
-          </con1:attributes>
-          <con1:addons/>
-        </con1:component>
-        <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Project 1 Test Suite 1:/sum-Request 1 Test Case" id="7d2ea248-57a3-4c51-a0e3-7721618fe540" category="Runners">
-          <con1:properties>
-            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-            <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">1000</con1:property>
-            <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property>
-            <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
-            <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
-            <con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/>
-            <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property>
-            <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">445ebf40-d927-48bc-b1eb-cfd9aa9a2ee6</con1:property>
-            <con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property>
-            <con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property>
-            <con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property>
-            <con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property>
-            <con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property>
-            <con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property>
-          </con1:properties>
-          <con1:attributes>
-            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property>
-          </con1:attributes>
-          <con1:addons/>
-        </con1:component>
-        <con1:component type="com.eviware.loadui.impl.component.generators.RampUpRate" label="Ramp 1" id="c7a3dec3-8cc2-48a7-a71a-7ff55885c2c1" category="Generators">
-          <con1:properties>
-            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
-            <con1:property propagates="true" key="limitVU" type="java.lang.Long">25</con1:property>
-            <con1:property propagates="true" key="start" type="java.lang.Long">0</con1:property>
-            <con1:property propagates="true" key="end" type="java.lang.Long">10</con1:property>
-            <con1:property propagates="true" key="period" type="java.lang.Long">10</con1:property>
-            <con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property>
-          </con1:properties>
-          <con1:attributes>
-            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ramp</con1:property>
-          </con1:attributes>
-          <con1:addons/>
-        </con1:component>
-        <con1:connection outputTerminalId="b11fd397-c9e1-49be-bec5-878b140c7aea/outgoingTerminal" inputTerminalId="c7a3dec3-8cc2-48a7-a71a-7ff55885c2c1/stateTerminal"/>
-        <con1:connection outputTerminalId="c7a3dec3-8cc2-48a7-a71a-7ff55885c2c1/triggerTerminal" inputTerminalId="7d2ea248-57a3-4c51-a0e3-7721618fe540/triggerTerminal"/>
-        <con1:connection outputTerminalId="7d2ea248-57a3-4c51-a0e3-7721618fe540/runningTerminal" inputTerminalId="c7a3dec3-8cc2-48a7-a71a-7ff55885c2c1/Sample Count"/>
-      </con1:scene>
-      <con1:statistics>
-        <con1:page title="DefaultLoadUIStatisticPage">
-          <con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="" groupType="Monitors">
-            <con1:chart statisticHolder="2e8e1f5b-f2c7-4df7-b5d9-a529002125a8">
-              <con1:attributes>
-                <con1:property key="_CHART_segments">77:36:2e8e1f5b-f2c7-4df7-b5d9-a529002125a89:Processor16:% Processor Time6:_Total72:36:2e8e1f5b-f2c7-4df7-b5d9-a529002125a86:Memory16:Available MBytes4:main</con1:property>
-              </con1:attributes>
-            </con1:chart>
-            <con1:attributes>
-              <con1:property key="GroupId">1ecbdb68-5fd0-49cb-bd70-907c07286e50</con1:property>
-            </con1:attributes>
-          </con1:chartGroup>
-          <con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="My server 1 Statistics" groupType="Graph">
-            <con1:chart statisticHolder="2e8e1f5b-f2c7-4df7-b5d9-a529002125a8">
-              <con1:attributes>
-                <con1:property key="_CHART_segments">77:36:2e8e1f5b-f2c7-4df7-b5d9-a529002125a89:Processor16:% Processor Time6:_Total72:36:2e8e1f5b-f2c7-4df7-b5d9-a529002125a86:Memory16:Available MBytes4:main</con1:property>
-              </con1:attributes>
-            </con1:chart>
-            <con1:attributes>
-              <con1:property key="GroupId">564ff426-96e7-4208-b5c6-7ae2b061a5a0</con1:property>
-            </con1:attributes>
-          </con1:chartGroup>
-          <con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="Stress Statistics" groupType="Graph">
-            <con1:chart statisticHolder="afbeebe3-5773-4f01-a379-1ede7c7de9c1">
-              <con1:attributes>
-                <con1:property key="_CHART_segments">67:36:afbeebe3-5773-4f01-a379-1ede7c7de9c110:Time Taken7:AVERAGE4:main68:36:afbeebe3-5773-4f01-a379-1ede7c7de9c18:Failures10:PER_SECOND4:main65:36:afbeebe3-5773-4f01-a379-1ede7c7de9c110:Running VU5:TOTAL4:main</con1:property>
-              </con1:attributes>
-            </con1:chart>
-            <con1:attributes>
-              <con1:property key="GroupId">fdb3cdcd-7a26-4fc5-baf5-98f3eef30389</con1:property>
-            </con1:attributes>
-          </con1:chartGroup>
-        </con1:page>
-      </con1:statistics>
-      <con1:heatUpTime>0</con1:heatUpTime>
-    </con1:loadui-project>
-    <con:loadUITestScenario projectId="afbeebe3-5773-4f01-a379-1ede7c7de9c1" scenarioId="6327e76c-ca1b-4487-8082-11acdf209114" name="New Scenario" id="c538c301-f811-4427-9e70-5478101273c3">
-      <con:settings/>
-    </con:loadUITestScenario>
-    <con:loadUIPanelData id="c0f969ee-ccd0-4faf-ad47-fc370349a51d">
-      <con:panel>Log</con:panel>
-    </con:loadUIPanelData>
-    <con:statistics id="564ff426-96e7-4208-b5c6-7ae2b061a5a0"/>
-    <con:statistics id="fdb3cdcd-7a26-4fc5-baf5-98f3eef30389"/>
-    <con:reportParameters/>
-  </con:loadUiTest>
   <con:tags/>
 </con:soapui-project>
